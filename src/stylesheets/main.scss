@@ -1,1 +1,179 @@
 // Your styles go here
+
+
+/****** GRID STYLING ******/
+body{
+    display: grid; /* 6 columns, */
+    grid-template-columns: 2fr, 2fr, 2fr; 
+    gap: 1rem;
+    background-color: #c7c7c7;
+}
+
+nav{
+    grid-area: 1 / 1 / span 1 / span 6; /*starts at row 2 spans 2 rows, starts at column 1 and spans 2 columns*/
+    background-color: 3dc2ff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+// Featured
+.featured > .top-featured{
+    grid-area: 2 / 1 / span 1 / span 7; 
+    text-align: center;
+    display: grid;
+    background-color: #3dc2ff;
+    color: white;
+}
+
+.featured > .low-featured{
+    grid-area: 3 / 1 / span 1 / span 7; 
+    text-align: center;
+    display: grid;
+    background-color: #181919;
+    color: rgb(162, 162, 162);
+}
+
+.featured > .low-featured > button{
+    background-color: #44c4a2;
+    color:#181919;
+}
+
+
+// Cards (paw, wheel, apple)
+.topcards {
+    grid-area: 4 / 1 / span 1 / span 3;
+    grid-template-columns: repeat(3, 1.5fr);
+    text-align: center;
+    display: grid;
+    background-color: #c7c7c7;
+    padding: .5em;
+    gap: .5em;
+}
+
+.topcards > .card{
+    
+    background-color: white;
+    color: black;
+}
+
+.topcards > .card > h3{
+    color: rgb(186, 184, 184);
+}
+
+.topcards > .card > p{
+    color: rgb(162, 162, 162);
+}
+
+.topcards > .card > a{
+    color: rgb(80, 45, 197);
+}
+
+//Perfect for Developers
+.perfect{
+    grid-area: 5 / 1 / span 1 / span 3;
+    text-align: center;
+    display: grid;
+    background-color: #c7c7c7;
+}
+
+.perfect > h1{
+    color: rgb(186, 184, 184);
+}
+
+.perfect > p{
+    color: rgb(162, 162, 162);
+}
+
+//CARDS
+.cards > .hello-foo{
+    grid-area: 6 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .card, .cards > .hello-foo > .card{
+    padding: .5em;
+    background-color: white;
+}
+
+.cards > .third{
+    grid-area: 7 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .vertical-top{
+    grid-area: 8 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .vertical-bottom{
+    grid-area: 9 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .middle-image{
+    grid-area: 10 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .wide{
+    grid-area: 11 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .tall{
+    grid-area: 12 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .side{
+    grid-area: 13 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .main{
+    grid-area: 14 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .murphy{
+    grid-area: 15 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+.cards > .main2{
+    grid-area: 16 / 1 / span 1 / span 6;
+    text-align: left;
+    display: grid;
+}
+
+//FOOTER
+.links{
+    grid-area: 17 / 1 / span 1 / span 3;
+    grid-template-columns: repeat(3, 1.5fr);
+    text-align: center;
+    display: grid;
+    background-color: #c7c7c7;
+    padding: .5em;
+    gap: .5em;
+}
+
+.sources{
+    text-align: center;
+}
+
+/****** FLEXBOX STYLING ******/
+nav > ul, .cards > .hello-foo {
+    display: flex;
+    gap: .5em;
+}
+
