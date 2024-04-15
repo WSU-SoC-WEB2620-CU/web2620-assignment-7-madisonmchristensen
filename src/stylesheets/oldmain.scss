@@ -1,0 +1,240 @@
+//MAIN BEFORE IMPLEMENTING SCSS
+//This is my CSS code before implementing SCSS and will not be used for the final version of this assignment. 
+
+
+/****** GRID STYLING ******/
+body{
+    display: grid; 
+    grid-template-columns: 2fr, 2fr, 2fr; 
+    background-color: #e5e4e4;
+}
+
+nav{
+    grid-area: 1 / 1 / span 1 / span 7; 
+    background-color: 3dc2ff;
+    padding: 10px;
+    background-color: #3dc2ff;
+}
+
+nav > ul > li{
+    list-style-type: none;
+    text-decoration: underline;
+    color: #181919;
+}
+
+// Featured
+.featured{
+    grid-area: 2 / 1 / span 1 / span 7; 
+}
+
+.featured > .top-featured{
+    text-align: center;
+    display: grid;
+    background-color: #3dc2ff;
+    color: white;
+}
+
+.featured > .low-featured{
+    text-align: center;
+    display: grid;
+    background-color: #181919;
+    color: rgb(162, 162, 162);
+}
+
+.featured > .low-featured > button{
+    background-color: #44c4a2;
+    color:#181919;
+}
+
+
+// Cards (paw, wheel, apple)
+.topcards {
+    grid-area: 3 / 1 / span 1 / span 7;
+    grid-template-columns: repeat(3, 1.5fr);
+    text-align: center;
+    display: grid;
+    background-color: #e5e4e4;
+    padding: .5em;
+    gap: .5em;
+}
+
+.topcards > .card{
+    background-color: white;
+    color: black;
+    border-radius: 1.5em;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.topcards > .card > h3{
+    color: rgb(186, 184, 184);
+}
+
+.topcards > .card > p{
+    color: rgb(162, 162, 162);
+}
+
+.topcards > .card > a{
+    color: rgb(80, 45, 197);
+}
+
+//Perfect for Developers
+.perfect{
+    grid-area: 4 / 1 / span 1 / span 7;
+    text-align: center;
+    display: grid;
+    background-color: #e5e4e4;
+}
+
+.perfect > h1{
+    color: rgb(186, 184, 184);
+}
+
+.perfect > p{
+    color: rgb(162, 162, 162);
+}
+
+//CARDS
+.cards{
+    grid-area: 5 / 1 / span 1 / span 7;
+    padding: 5em;  
+}
+
+.cards > .hello-foo{
+    text-align: left;
+    display: grid; 
+}
+
+.cards > .card, .cards > .hello-foo > .card{
+    padding: .5em;
+    background-color: white;
+    border-radius: .5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .third{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .vertical-top{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .vertical-bottom{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .middle-image{
+    text-align: left;
+    display: grid;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .middle-image > img{
+    justify-self: center;
+}
+
+.cards > .wide{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .tall{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .side{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .main{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .murphy{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards > .main2{
+    text-align: left;
+    display: grid;
+	border-top: .5em solid #e5e4e4;
+    border-radius: 1.5em;  
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+//FOOTER
+footer{
+    grid-area: 6 / 1 / span 1 / span 7;
+    background-color: #303232;
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+
+.links{
+    grid-template-columns: repeat(3, 2fr);
+    text-align: center;
+    display: grid;
+    background-color: #303232;
+    padding: 3em;
+    gap: .5em;
+}
+
+.links > .links1 > ul > li > a,
+.links > .links2 > ul > li > a,
+.links > .links3 > ul > li > a
+{
+    color: rgb(80, 45, 197);
+}
+
+.sources{
+    text-align: center;
+}
+
+/****** FLEXBOX STYLING ******/
+nav > ul, 
+.cards > .hello-foo{
+    display: flex;
+    gap: .5em;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li:nth-child(2) {
+    margin-left: auto;
+}
+

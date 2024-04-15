@@ -1,0 +1,42 @@
+// FOOTER.SCSS
+
+//FOOTER
+footer{
+    grid-area: 6 / 1 / span 1 / span 7;
+    background-color: $light-black;
+    color: $clear-white;
+    width: 100%;
+    justify-content: center;
+}
+
+.links{
+    grid-template-columns: repeat(3, 2fr);
+    text-align: center;
+    display: grid;
+    background-color: $light-black;
+    padding: 3em;
+    gap: $halfem;
+}
+
+.links > .links1 > ul > li > a,
+.links > .links2 > ul > li > a,
+.links > .links3 > ul > li > a
+{
+    color: rgb(80, 45, 197);
+}
+
+.sources{
+    text-align: center;
+}
+
+/****** FLEXBOX STYLING ******/
+nav > ul, 
+.cards > .hello-foo{
+    display: flex;
+    gap: $halfem;
+}
+
+nav > ul > li:nth-child(2) {
+    margin-left: auto;
+}
+

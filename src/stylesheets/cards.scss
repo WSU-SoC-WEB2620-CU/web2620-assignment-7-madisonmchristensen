@@ -1,0 +1,77 @@
+// CARDS.SCSS
+
+// Cards (paw, wheel, apple)
+.topcards {
+    grid-area: 3 / 1 / span 1 / span 7;
+    grid-template-columns: repeat(3, 1.5fr);
+    text-align: center;
+    display: grid;
+    background-color: $card-color;
+    padding: $halfem;
+    gap: $halfem;
+
+    & > .card{
+        color: black;
+        @include card-specific;
+    
+        & > h3{
+            color: rgb(186, 184, 184);
+        }
+        
+        & > p{
+            color: rgb(162, 162, 162);
+        }
+        
+        & > a{
+            color: rgb(80, 45, 197);
+        }
+    }
+}
+
+//CARDS
+.cards{
+    grid-area: 5 / 1 / span 1 / span 7;
+    padding: 5em;  
+
+    & > .hello-foo{
+        text-align: left;
+        display: grid; 
+    }
+    
+    & > .card, & > .hello-foo > .card{
+        padding: $halfem;
+        @include card-specific;
+    }
+    
+    & > .third{
+        @include card-style;
+    }
+    
+    & > .vertical-top{
+        @include card-style;
+    }
+    
+    & > .vertical-bottom{
+        @include card-style;
+    }
+    
+    & > .middle-image{
+        text-align: left;
+        display: grid;
+        border-radius: $onehalfem;  
+        box-shadow: 5px $tenpx rgba(0, 0, 0, 0.05);
+
+        & > img{
+            justify-self: center;
+        }
+    }
+    
+    & > .wide{
+        @include card-style;
+    }
+    
+    & > .tall, & > .side, & > .main, & > .murphy, & > .main2{
+        @extend .wide;
+    }
+}
+

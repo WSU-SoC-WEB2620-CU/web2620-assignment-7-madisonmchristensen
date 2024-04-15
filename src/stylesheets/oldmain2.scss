@@ -1,0 +1,212 @@
+// MAIN BEFORE SPLITTING INTO MULTIPLE FILES
+//This is my sCSS code before splitting into multiple files and will not be used for the final version of this assignment.
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+/****** SCSS VARIABLES ******/
+$background-blue: #3dc2ff;
+$light-black: #181919;
+$card-color: #e5e4e4;
+$clear-white: white;
+$halfem: .5em;
+$onehalfem: 1.5em;
+$tenpx: 10px; 
+
+
+/****** MIXINS ******/
+@mixin card-style{
+    text-align: left;
+    display: grid;
+	border-top: $halfem solid $card-color;
+    border-radius: $onehalfem;  
+    box-shadow: 5px $tenpx rgba(0, 0, 0, 0.05);
+}
+
+@mixin card-specific{
+    background-color: $clear-white;
+    border-radius: $halfem;  
+    box-shadow: 5px $tenpx rgba(0, 0, 0, 0.05);
+}
+
+
+/****** FUNCTION ******/
+@function calc-grid-area($num){
+    //@return grid-area: $num / 1 / span 1 / span 7;
+}
+
+/****** IMPORTED FILES ******/
+
+/****** GRID STYLING ******/
+body{
+    display: grid;
+    grid-template-columns: 2fr, 2fr, 2fr; 
+    background-color: $card-color;
+}
+
+nav{
+    grid-area: 1 / 1 / span 1 / span 7;
+    padding: $tenpx;
+    background-color: $background-blue;
+
+    & > ul > li{
+        list-style-type: none;
+        text-decoration: underline;
+        color: $light-black;
+    }
+}
+
+// Featured
+.featured{
+    grid-area: 2 / 1 / span 1 / span 7; 
+
+    & > .top-featured{
+        text-align: center;
+        display: grid;
+        background-color: $background-blue;
+        color: $clear-white;
+    }
+    
+    & > .low-featured{
+        text-align: center;
+        display: grid;
+        background-color: $light-black;
+        color: rgb(162, 162, 162);
+    
+        & > button{
+            background-color: #44c4a2;
+            color: $light-black;
+        }
+    }
+}
+
+// Cards (paw, wheel, apple)
+.topcards {
+    grid-area: 3 / 1 / span 1 / span 7;
+    grid-template-columns: repeat(3, 1.5fr);
+    text-align: center;
+    display: grid;
+    background-color: $card-color;
+    padding: $halfem;
+    gap: $halfem;
+
+    & > .card{
+        color: black;
+        @include card-specific;
+    
+        & > h3{
+            color: rgb(186, 184, 184);
+        }
+        
+        & > p{
+            color: rgb(162, 162, 162);
+        }
+        
+        & > a{
+            color: rgb(80, 45, 197);
+        }
+    }
+}
+
+//Perfect for Developers
+.perfect{
+    grid-area: 4 / 1 / span 1 / span 7;
+    text-align: center;
+    display: grid;
+    background-color: $card-color;
+
+    & > h1{
+        color: rgb(186, 184, 184);
+    }
+    
+    & > p{
+        color: rgb(162, 162, 162);
+    }
+}
+
+//CARDS
+.cards{
+    grid-area: 5 / 1 / span 1 / span 7;
+    padding: 5em;  
+
+    & > .hello-foo{
+        text-align: left;
+        display: grid; 
+    }
+    
+    & > .card, & > .hello-foo > .card{
+        padding: $halfem;
+        @include card-specific;
+    }
+    
+    & > .third{
+        @include card-style;
+    }
+    
+    & > .vertical-top{
+        @include card-style;
+    }
+    
+    & > .vertical-bottom{
+        @include card-style;
+    }
+    
+    & > .middle-image{
+        text-align: left;
+        display: grid;
+        border-radius: $onehalfem;  
+        box-shadow: 5px $tenpx rgba(0, 0, 0, 0.05);
+
+        & > img{
+            justify-self: center;
+        }
+    }
+    
+    & > .wide{
+        @include card-style;
+    }
+    
+    & > .tall, & > .side, & > .main, & > .murphy, & > .main2{
+        @extend .wide;
+    }
+}
+
+//FOOTER
+footer{
+    grid-area: 6 / 1 / span 1 / span 7;
+    background-color: $light-black;
+    color: $clear-white;
+    width: 100%;
+    justify-content: center;
+}
+
+.links{
+    grid-template-columns: repeat(3, 2fr);
+    text-align: center;
+    display: grid;
+    background-color: $light-black;
+    padding: 3em;
+    gap: $halfem;
+}
+
+.links > .links1 > ul > li > a,
+.links > .links2 > ul > li > a,
+.links > .links3 > ul > li > a
+{
+    color: rgb(80, 45, 197);
+}
+
+.sources{
+    text-align: center;
+}
+
+/****** FLEXBOX STYLING ******/
+nav > ul, 
+.cards > .hello-foo{
+    display: flex;
+    gap: $halfem;
+}
+
+nav > ul > li:nth-child(2) {
+    margin-left: auto;
+}
+
